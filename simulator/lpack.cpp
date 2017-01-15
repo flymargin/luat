@@ -18,6 +18,9 @@
  *     panjun 16/10/19 Initially create file.
  *     BogdanM -/-/-   Modified it for eLua.
  **************************************************************************/
+#include "stdafx.h"
+#include "lua.hpp"
+#include "auxmods.h"
 
 #define	OP_ZSTRING	'z'		/* zero-terminated string */
 #define	OP_BSTRING	'p'		/* string preceded by length byte */
@@ -38,10 +41,6 @@
 #define	OP_LITTLEENDIAN	'<'		/* little endian */
 #define	OP_BIGENDIAN	'>'		/* big endian */
 #define	OP_NATIVE	'='		/* native endian */
-
-#include "stdafx.h"
-#include "lua.hpp"
-#include "auxmods.h"
 
 static void badcode(lua_State *L, int c)
 {
